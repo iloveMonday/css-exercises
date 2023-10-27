@@ -26,7 +26,7 @@ button {
   font-weight: 600;
 }
 
-.popup-modal {
+/*.popup-modal {
   padding: 32px 64px;
   background-color: white;
   border: 1px solid black;
@@ -38,6 +38,22 @@ button {
   transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 0%;
+  text-align: center;
+}*/
+
+.popup-modal {
+  padding: 32px 64px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease;
+  transform-origin: center;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+  opacity: 0%; /*changed opacity to 20% from 0% for working*/
   text-align: center;
 }
 
@@ -56,6 +72,7 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  transform: translate(-50%, -50%);
 }
 
 .backdrop.show {
